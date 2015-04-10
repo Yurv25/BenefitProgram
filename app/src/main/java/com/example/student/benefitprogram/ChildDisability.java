@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -46,7 +45,7 @@ public class ChildDisability extends ActionBarActivity {
             while((line = bf.readLine()) != null){
                 data = line.split(",");
                 if(count==0){
-                    if(i <= Integer.parseInt(data[0])){
+                    if(i <= Integer.parseInt(data[0]) && i > 0){
                         myin.setText(inc.getText());
                         switch(d){
                             case 1:
@@ -87,9 +86,9 @@ public class ChildDisability extends ActionBarActivity {
                     count = Integer.parseInt(data[0]);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "this is my Toast message!!! =)",
-                            Toast.LENGTH_LONG).show();
-                    // toast
+                    Toast.makeText(getApplicationContext(), "Invalid Input",
+                            Toast.LENGTH_SHORT).show();
+                    break;
                 }
 
             }

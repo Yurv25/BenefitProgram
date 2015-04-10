@@ -44,154 +44,153 @@ public class GSTHST extends ActionBarActivity {
         int selectedId= radioStatusGroup.getCheckedRadioButtonId();
         radioMarriedButton = (RadioButton) findViewById(selectedId);
 
-        if(radioMarriedButton.getText().equals("Married")){
-            try {
-                int i = Integer.parseInt(inc.getText().toString());
-                int d = Integer.parseInt(dep.getText().toString());
-                InputStream is = getAssets().open("Married.csv");
-                BufferedReader bf = new BufferedReader(new InputStreamReader(is));
-                String line;
+       if(radioMarriedButton != null) {
+           if (radioMarriedButton.getText().equals("Married")) {
+               try {
+                   int i = Integer.parseInt(inc.getText().toString());
+                   int d = Integer.parseInt(dep.getText().toString());
+                   InputStream is = getAssets().open("Married.csv");
+                   BufferedReader bf = new BufferedReader(new InputStreamReader(is));
+                   String line;
 
-                while((line = bf.readLine()) != null){
-                    data = line.split(",");
-                    if(count==0){
-                        if(i <= Integer.parseInt(data[0])){
-                            myin.setText(inc.getText());
-                            switch(d){
-                                case 0:
-                                    mydep.setText(data[1]);
-                                    break;
-                                case 1:
-                                    mydep.setText(data[2]);
-                                    break;
-                                case 2:
-                                    mydep.setText(data[3]);
-                                    break;
-                                case 3:
-                                    mydep.setText(data[4]);
-                                    break;
-                                case 4:
-                                    mydep.setText(data[5]);
-                                    break;
-                            }
-                            break;
-                            //start activity
-                        }
-                        else{
-                            count = Integer.parseInt((data[0])); //previous value
-                        }
+                   while ((line = bf.readLine()) != null) {
+                       data = line.split(",");
+                       if (count == 0) {
+                           if (i <= Integer.parseInt(data[0]) && i > 0) {
+                               myin.setText(inc.getText());
+                               switch (d) {
+                                   case 0:
+                                       mydep.setText(data[1]);
+                                       break;
+                                   case 1:
+                                       mydep.setText(data[2]);
+                                       break;
+                                   case 2:
+                                       mydep.setText(data[3]);
+                                       break;
+                                   case 3:
+                                       mydep.setText(data[4]);
+                                       break;
+                                   case 4:
+                                       mydep.setText(data[5]);
+                                       break;
+                               }
+                               break;
+                               //start activity
+                           } else {
+                               count = Integer.parseInt((data[0])); //previous value
+                           }
 
-                    }
-                    else if(i > count && i <= Integer.parseInt(data[0])){
-                        myin.setText(inc.getText());
-                        switch(d){
-                            case 0:
-                                mydep.setText(data[1]);
-                                break;
-                            case 1:
-                                mydep.setText(data[2]);
-                                break;
-                            case 2:
-                                mydep.setText(data[3]);
-                                break;
-                            case 3:
-                                mydep.setText(data[4]);
-                                break;
-                            case 4:
-                                mydep.setText(data[5]);
-                                break;
-                        }
-                        break;
-                        //start activity
-                    }
-                    else if(i > Integer.parseInt(data[0])){
-                        count = Integer.parseInt(data[0]);
-                    }
-                    else{
-                        Toast.makeText(getApplicationContext(), "this is my Toast message!!! =)",
-                                Toast.LENGTH_LONG).show();
-                        // toast
-                    }
+                       } else if (i > count && i <= Integer.parseInt(data[0])) {
+                           myin.setText(inc.getText());
+                           switch (d) {
+                               case 0:
+                                   mydep.setText(data[1]);
+                                   break;
+                               case 1:
+                                   mydep.setText(data[2]);
+                                   break;
+                               case 2:
+                                   mydep.setText(data[3]);
+                                   break;
+                               case 3:
+                                   mydep.setText(data[4]);
+                                   break;
+                               case 4:
+                                   mydep.setText(data[5]);
+                                   break;
+                           }
+                           break;
+                           //start activity
+                       } else if (i > Integer.parseInt(data[0])) {
+                           count = Integer.parseInt(data[0]);
+                       } else {
+                           Toast.makeText(getApplicationContext(), "Invalid Input",
+                                   Toast.LENGTH_SHORT).show();
+                           break;
+                       }
 
-                }
-            } catch (Exception E){
-                E.printStackTrace();
-            }
-        }
-        else{
-            try {
-                int i = Integer.parseInt(inc.getText().toString());
-                int d = Integer.parseInt(dep.getText().toString());
-                InputStream is = getAssets().open("NotMarried.csv");
-                BufferedReader bf = new BufferedReader(new InputStreamReader(is));
-                String line;
+                   }
+               } catch (Exception E) {
+                   E.printStackTrace();
+               }
+           } else if (radioMarriedButton.getText().equals("Not Married")) {
+               try {
+                   int i = Integer.parseInt(inc.getText().toString());
+                   int d = Integer.parseInt(dep.getText().toString());
+                   InputStream is = getAssets().open("NotMarried.csv");
+                   BufferedReader bf = new BufferedReader(new InputStreamReader(is));
+                   String line;
 
-                while((line = bf.readLine()) != null){
-                    data = line.split(",");
-                    if(count==0){
-                        if(i <= Integer.parseInt(data[0])){
-                            myin.setText(inc.getText());
-                            switch(d){
-                                case 0:
-                                    mydep.setText(data[1]);
-                                    break;
-                                case 1:
-                                    mydep.setText(data[2]);
-                                    break;
-                                case 2:
-                                    mydep.setText(data[3]);
-                                    break;
-                                case 3:
-                                    mydep.setText(data[4]);
-                                    break;
-                                case 4:
-                                    mydep.setText(data[5]);
-                                    break;
-                            }
-                            break;
-                            //start activity
-                        }
-                        else{
-                            count = Integer.parseInt((data[0])); //previous value
-                        }
+                   while ((line = bf.readLine()) != null) {
+                       data = line.split(",");
+                       if (count == 0) {
+                           if (i <= Integer.parseInt(data[0]) && i >0) {
+                               myin.setText(inc.getText());
+                               switch (d) {
+                                   case 0:
+                                       mydep.setText(data[1]);
+                                       break;
+                                   case 1:
+                                       mydep.setText(data[2]);
+                                       break;
+                                   case 2:
+                                       mydep.setText(data[3]);
+                                       break;
+                                   case 3:
+                                       mydep.setText(data[4]);
+                                       break;
+                                   case 4:
+                                       mydep.setText(data[5]);
+                                       break;
+                               }
+                               break;
+                               //start activity
+                           } else {
+                               count = Integer.parseInt((data[0])); //previous value
+                           }
 
-                    }
-                    else if(i > count && i <= Integer.parseInt(data[0])){
-                        myin.setText(inc.getText());
-                        switch(d){
-                            case 0:
-                                mydep.setText(data[1]);
-                                break;
-                            case 1:
-                                mydep.setText(data[2]);
-                                break;
-                            case 2:
-                                mydep.setText(data[3]);
-                                break;
-                            case 3:
-                                mydep.setText(data[4]);
-                                break;
-                            case 4:
-                                mydep.setText(data[5]);
-                                break;
-                        }
-                        break;
-                        //start activity
-                    }
-                    else if(i > Integer.parseInt(data[0])){
-                        count = Integer.parseInt(data[0]);
-                    }
-                    else{
-                        Toast.makeText(getApplicationContext(), "this is my Toast message!!! =)",
-                                Toast.LENGTH_LONG).show();
-                        // toast
-                    }
+                       } else if (i > count && i <= Integer.parseInt(data[0])) {
+                           myin.setText(inc.getText());
+                           switch (d) {
+                               case 0:
+                                   mydep.setText(data[1]);
+                                   break;
+                               case 1:
+                                   mydep.setText(data[2]);
+                                   break;
+                               case 2:
+                                   mydep.setText(data[3]);
+                                   break;
+                               case 3:
+                                   mydep.setText(data[4]);
+                                   break;
+                               case 4:
+                                   mydep.setText(data[5]);
+                                   break;
+                           }
+                           break;
+                           //start activity
+                       } else if (i > Integer.parseInt(data[0])) {
+                           count = Integer.parseInt(data[0]);
+                       } else {
+                           Toast.makeText(getApplicationContext(), "Invalid Input",
+                                   Toast.LENGTH_SHORT).show();
+                           break;
+                       }
 
-                }
-            } catch (Exception E){
-                E.printStackTrace();
-            }
-        }
+                   }
+               } catch (Exception E) {
+                   E.printStackTrace();
+               }
+           } else {
+               Toast.makeText(getApplicationContext(), "Complete all fields",
+                       Toast.LENGTH_SHORT).show();
+           }
+       }else{
+           Toast.makeText(getApplicationContext(), "Complete all fields",
+                   Toast.LENGTH_SHORT).show();
+       }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
