@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.student.benefitprogram"
+    android:versionCode="1"
+    android:versionName="1.0.1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChildDisability"
+            android:label="@string/title_activity_child_disability" >
+        </activity>
+        <activity
+            android:name=".GSTHST"
+            android:label="@string/title_activity_gsthst" >
+        </activity>
+        <activity
+            android:name=".NCBS"
+            android:label="@string/title_activity_ncbs" >
+        </activity>
+        <activity
+            android:name=".CCTB"
+            android:label="@string/title_activity_cctb" >
+        </activity>
+        <activity
+            android:name=".Childinfo"
+            android:label="@string/title_activity_childinfo"
+            android:parentActivityName=".ChildDisability" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.student.benefitprogram.ChildDisability" />
+        </activity>
+        <activity
+            android:name=".CCTBinfo"
+            android:label="@string/title_activity_cctbinfo"
+            android:parentActivityName=".CCTB" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.student.benefitprogram.CCTB" />
+        </activity>
+        <activity
+            android:name=".NCBSinfo"
+            android:label="@string/title_activity_ncsbinfo"
+            android:parentActivityName=".NCBS" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.student.benefitprogram.NCBS" />
+        </activity>
+        <activity
+            android:name=".GSTinfo"
+            android:label="@string/title_activity_gstinfo"
+            android:parentActivityName=".GSTHST" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.student.benefitprogram.GSTHST" />
+        </activity>
+    </application>
+
+</manifest>

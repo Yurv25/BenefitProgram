@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">BenefitProgram</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_info">Information</string>
+    <string name="title_activity_child_disability">ChildDisability</string>
+    <string name="title_activity_gsthst">GSTHST</string>
+    <string name="title_activity_ncbs">NCBS</string>
+    <string name="title_activity_cctb">CCTB</string>
+    <string name="crawebsite"><a href="http://www.cra-arc.gc.ca/menu-eng.html">Canada Revenue Agency</a></string>
+    <string name="title_activity_cctbinfo">CCTBInfo</string>
+    <string name="cctb_info">
+        CCTB/NCBS Guideline Table effective July 2014 -June 2015.
+        Notes:
+        1 Slight variances exist for the basic benefit amount for residents of Alberta.
+    2 These amounts are for the Federal CCTB program (basic benefit plus National Child Benefit Supplement)
+    exclusive of any amount to which a recipient may be eligible under any existing provincial or territorial benefit or credit program.
+    3 These amounts are only to be used as a guideline. All recipients must keep Canada Revenue Agency informed of any changes
+    to their family income, marital status, number of dependent children and current address.
+    4 These amounts do not include the Child Disability Benefit (CDB).
+    5,Universal Child Care Benefit (UCCB) or Registered Disability Savings Plan (RDSP) will not be included as part of your adjusted
+     family net income in the calculation of your CCTB.
+    </string>
+    <string name="title_activity_childinfo">Childinfo</string>
+    <string name="action_settings">Settings</string>
+    <string name="child_info">
+        Child Disability Benefit Guideline Table effective July 2014 - June 2015
+        ** The CDB base threshold is determined by the total number of children eligible for the CCTB as follows:
+        Number of children,Base threshold
+        1.$43,953
+        2.$43,945
+        3.$43,929
+        4.$49,593
+        5.$55,257
+        6.$60,920
+        7.$66,584
+        8.$72,248
+        The CDB base amount is calculated using the formula:
+        F/H + $25,584 where:
+        F is the annual entitlement of the NCBS amounts for each child.
+       H equals the NCBS annual reduction rate for the total number of children
+    </string>
+    <string name="ncbsinfo" formatted="false">
+    Monthly NCBS only entitlement - 2013 tax year (July 2014 - June 2015).
+    Entitlement:
+    $2,241 - 1st child
+    $1,982 - 2nd child
+    $1,886 - 3rd and each additional child
+    Reduction rate:
+    12.2% - 1 child
+    23.0% - 2 children
+    33.3% - 3 and more children
+    Universal Child Care Benefit (UCCB) or Registered Disability Savings Plan (RDSP) will
+    not be included as part of your adjusted family net income in the calculation of your CCTB.
+    </string>
+    <string name="title_activity_ncsbinfo">NCSBinfo</string>
+    <string name="title_activity_gstinfo">GSTinfo</string>
+    <string name="gst_info">
+        GST-HST Credit : Guideline Table effective July 2014 - June 2015
+        Notes:
+        1.The amounts listed above represent a recipients yearly entitlement for the GST/HST credit
+        based on their marital status, family size and family net income.
+        2. The yearly entitlement for the 2013 tax year is paid in 4 quarterly issuances in the months of July and October 2014 and January and April 2015.
+        3. These amounts are only to be used as a guideline
+        4. All recipients must keep the Canada Revenue Agency informed of any changes to their current address, family size and marital situation.
+        5. The Universal Child Care Benefit (UCCB) and/or Registered Disability Savings Plan (RDSP) are not to be included as part of your adjusted family net income in the calculation of your GST/HST credit.
+    </string>
+
+</resources>
